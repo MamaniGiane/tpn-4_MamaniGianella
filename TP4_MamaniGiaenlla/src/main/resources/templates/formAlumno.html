@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container">
+	<h1>Formulario Alumno</h1>
+	<form data-th-object="${nuevoAlumno}" data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}" method="post">
+		  <div class="col-md-6">
+		    <label for="dni" class="form-label">DNI</label>
+		    <input type="number" class="form-control" id="dni" data-th-field="*{dni}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="nombre" class="form-label">Nombre</label>
+		    <input type="text" class="form-control" id="nombre" data-th-field="*{nombre}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="apellido" class="form-label">Apellido</label>
+		    <input type="text" class="form-control" id="apellido" data-th-field="*{apellido}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="email" class="form-label">Email</label>
+		    <input type="email" class="form-control" id="email" data-th-field="*{email}">
+		  </div>
+		  <div class="col-md-4">
+		    <label for="tel" class="form-label">Telefono</label>
+		    <input type="number" class="form-control" id="tel" data-th-field="*{telefono}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="fecNac" class="form-label">Fecha de Nacimiento</label>
+		    <input type="date" class="form-control" id="fecNac" data-th-field="*{fecNac}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="domi" class="form-label">Domicilio</label>
+		    <input type="text" class="form-control" id="domi" data-th-field="*{domicilio}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="LU" class="form-label">LU</label>
+		    <input type="number" class="form-control" id="LU" data-th-field="*{LU}">
+		  </div>
+		  
+		  
+		  <button type="submit" class="btn btn-primary">Guardar datos</button>
+		</form>
+	</div>
+	
+
+
+	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
